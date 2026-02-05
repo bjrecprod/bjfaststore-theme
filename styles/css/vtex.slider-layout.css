@@ -1,0 +1,21 @@
+/* ==========================================
+   SLIDER LAYOUT STYLES
+   ========================================== */
+
+.hero-slider {
+  margin-bottom: 0;
+}
+
+/* Mobile Hero Slider */
+.hero-slider-mobile {
+  margin-bottom: 0;
+}
+
+/* Slider navigation dots */
+.sliderLayoutContainer--hero-slider .paginationDotsContainer {
+  bottom: 20px;
+}
+
+.sliderLayoutContainer--hero-slider-mobile .paginationDotsContainer {
+  bottom: 10px;
+}

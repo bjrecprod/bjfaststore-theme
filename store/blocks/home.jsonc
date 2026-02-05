@@ -1,15 +1,1354 @@
 {
-  "store.home": { 
+  "store.home": {
     "blocks": [
-      "rich-text"
+      "responsive-layout.desktop#hero",
+      "responsive-layout.mobile#hero",
+      "flex-layout.row#categories-title",
+      "flex-layout.row#categories-grid",
+      "flex-layout.row#trending-title",
+      "shelf#trending",
+      "flex-layout.row#tech-apparel",
+      "flex-layout.row#experiences-banner",
+      "flex-layout.row#tools-home",
+      "flex-layout.row#agri-sporting",
+      "flex-layout.row#food-title",
+      "shelf#food",
+      "flex-layout.row#trust-badges",
+      "flex-layout.row#newsletter"
     ]
   },
-  "rich-text": { 
-    "props": { 
-      "text": "VTEX Store Framework",
+
+  // ==========================================
+  // HERO SLIDER - DESKTOP
+  // ==========================================
+  "responsive-layout.desktop#hero": {
+    "children": ["slider-layout#hero-desktop"]
+  },
+  "slider-layout#hero-desktop": {
+    "props": {
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": true
+      },
+      "infinite": true,
+      "showNavigationArrows": "always",
+      "showPaginationDots": "always",
+      "blockClass": "hero-slider",
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.row#hero-slide-1",
+      "flex-layout.row#hero-slide-2",
+      "flex-layout.row#hero-slide-3",
+      "flex-layout.row#hero-slide-4"
+    ]
+  },
+
+  // Hero Slide 1 - Tech
+  "flex-layout.row#hero-slide-1": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "hero-slide hero-tech"
+    },
+    "children": ["flex-layout.col#hero-content-1"]
+  },
+  "flex-layout.col#hero-content-1": {
+    "props": {
+      "blockClass": "hero-content",
+      "verticalAlign": "middle",
+      "horizontalAlign": "center",
+      "paddingTop": 9,
+      "paddingBottom": 9
+    },
+    "children": [
+      "rich-text#hero-title-1",
+      "rich-text#hero-subtitle-1",
+      "link#hero-cta-1"
+    ]
+  },
+  "rich-text#hero-title-1": {
+    "props": {
+      "text": "## Latest Tech Deals",
       "textAlignment": "CENTER",
       "textPosition": "CENTER",
-      "font": "t-heading-1"
+      "blockClass": "hero-title"
+    }
+  },
+  "rich-text#hero-subtitle-1": {
+    "props": {
+      "text": "Discover computers, software & more",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "hero-subtitle"
+    }
+  },
+  "link#hero-cta-1": {
+    "props": {
+      "href": "/computer---software",
+      "label": "Shop Now",
+      "blockClass": "hero-cta"
+    }
+  },
+
+  // Hero Slide 2 - Fashion
+  "flex-layout.row#hero-slide-2": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "hero-slide hero-fashion"
+    },
+    "children": ["flex-layout.col#hero-content-2"]
+  },
+  "flex-layout.col#hero-content-2": {
+    "props": {
+      "blockClass": "hero-content",
+      "verticalAlign": "middle",
+      "horizontalAlign": "center",
+      "paddingTop": 9,
+      "paddingBottom": 9
+    },
+    "children": [
+      "rich-text#hero-title-2",
+      "rich-text#hero-subtitle-2",
+      "link#hero-cta-2"
+    ]
+  },
+  "rich-text#hero-title-2": {
+    "props": {
+      "text": "## New Season Apparel",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "hero-title"
+    }
+  },
+  "rich-text#hero-subtitle-2": {
+    "props": {
+      "text": "adidas performance collection",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "hero-subtitle"
+    }
+  },
+  "link#hero-cta-2": {
+    "props": {
+      "href": "/apparel",
+      "label": "Shop Collection",
+      "blockClass": "hero-cta"
+    }
+  },
+
+  // Hero Slide 3 - Sporting
+  "flex-layout.row#hero-slide-3": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "hero-slide hero-sporting"
+    },
+    "children": ["flex-layout.col#hero-content-3"]
+  },
+  "flex-layout.col#hero-content-3": {
+    "props": {
+      "blockClass": "hero-content",
+      "verticalAlign": "middle",
+      "horizontalAlign": "center",
+      "paddingTop": 9,
+      "paddingBottom": 9
+    },
+    "children": [
+      "rich-text#hero-title-3",
+      "rich-text#hero-subtitle-3",
+      "link#hero-cta-3"
+    ]
+  },
+  "rich-text#hero-title-3": {
+    "props": {
+      "text": "## Gear Up for Adventure",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "hero-title"
+    }
+  },
+  "rich-text#hero-subtitle-3": {
+    "props": {
+      "text": "Nike & Skechers Golf Shoes",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "hero-subtitle"
+    }
+  },
+  "link#hero-cta-3": {
+    "props": {
+      "href": "/sporting",
+      "label": "Shop Sporting",
+      "blockClass": "hero-cta"
+    }
+  },
+
+  // Hero Slide 4 - Tours
+  "flex-layout.row#hero-slide-4": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "hero-slide hero-tours"
+    },
+    "children": ["flex-layout.col#hero-content-4"]
+  },
+  "flex-layout.col#hero-content-4": {
+    "props": {
+      "blockClass": "hero-content",
+      "verticalAlign": "middle",
+      "horizontalAlign": "center",
+      "paddingTop": 9,
+      "paddingBottom": 9
+    },
+    "children": [
+      "rich-text#hero-title-4",
+      "rich-text#hero-subtitle-4",
+      "link#hero-cta-4"
+    ]
+  },
+  "rich-text#hero-title-4": {
+    "props": {
+      "text": "## Explore & Experience",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "hero-title"
+    }
+  },
+  "rich-text#hero-subtitle-4": {
+    "props": {
+      "text": "Museum tours & tickets available",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "hero-subtitle"
+    }
+  },
+  "link#hero-cta-4": {
+    "props": {
+      "href": "/tours",
+      "label": "Book Now",
+      "blockClass": "hero-cta"
+    }
+  },
+
+  // ==========================================
+  // HERO SLIDER - MOBILE
+  // ==========================================
+  "responsive-layout.mobile#hero": {
+    "children": ["slider-layout#hero-mobile"]
+  },
+  "slider-layout#hero-mobile": {
+    "props": {
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": true
+      },
+      "infinite": true,
+      "showNavigationArrows": "never",
+      "showPaginationDots": "always",
+      "blockClass": "hero-slider-mobile",
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.row#hero-slide-1",
+      "flex-layout.row#hero-slide-2",
+      "flex-layout.row#hero-slide-3",
+      "flex-layout.row#hero-slide-4"
+    ]
+  },
+
+  // ==========================================
+  // SHOP BY CATEGORY SECTION
+  // ==========================================
+  "flex-layout.row#categories-title": {
+    "props": {
+      "blockClass": "section-title",
+      "horizontalAlign": "center",
+      "paddingTop": 8,
+      "paddingBottom": 5
+    },
+    "children": ["rich-text#categories-title"]
+  },
+  "rich-text#categories-title": {
+    "props": {
+      "text": "### Shop by Category",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "section-heading"
+    }
+  },
+
+  // Category Grid - 3x3
+  "flex-layout.row#categories-grid": {
+    "props": {
+      "blockClass": "categories-grid",
+      "horizontalAlign": "center",
+      "colGap": 4,
+      "rowGap": 4,
+      "paddingLeft": 6,
+      "paddingRight": 6,
+      "paddingBottom": 8
+    },
+    "children": [
+      "flex-layout.col#cat-row-1",
+      "flex-layout.col#cat-row-2",
+      "flex-layout.col#cat-row-3"
+    ]
+  },
+
+  // Category Row 1: Agribusiness, Apparel, Computer & Software
+  "flex-layout.col#cat-row-1": {
+    "props": {
+      "blockClass": "category-row"
+    },
+    "children": ["flex-layout.row#cat-row-1-items"]
+  },
+  "flex-layout.row#cat-row-1-items": {
+    "props": {
+      "colGap": 4,
+      "horizontalAlign": "center"
+    },
+    "children": [
+      "flex-layout.col#cat-agribusiness",
+      "flex-layout.col#cat-apparel",
+      "flex-layout.col#cat-computer"
+    ]
+  },
+
+  // Category Row 2: Food, Home Appliance, Power Tools
+  "flex-layout.col#cat-row-2": {
+    "props": {
+      "blockClass": "category-row",
+      "paddingTop": 4
+    },
+    "children": ["flex-layout.row#cat-row-2-items"]
+  },
+  "flex-layout.row#cat-row-2-items": {
+    "props": {
+      "colGap": 4,
+      "horizontalAlign": "center"
+    },
+    "children": [
+      "flex-layout.col#cat-food",
+      "flex-layout.col#cat-home",
+      "flex-layout.col#cat-tools"
+    ]
+  },
+
+  // Category Row 3: Sporting, Tickets, Tours
+  "flex-layout.col#cat-row-3": {
+    "props": {
+      "blockClass": "category-row",
+      "paddingTop": 4
+    },
+    "children": ["flex-layout.row#cat-row-3-items"]
+  },
+  "flex-layout.row#cat-row-3-items": {
+    "props": {
+      "colGap": 4,
+      "horizontalAlign": "center"
+    },
+    "children": [
+      "flex-layout.col#cat-sporting",
+      "flex-layout.col#cat-tickets",
+      "flex-layout.col#cat-tours"
+    ]
+  },
+
+  // Individual Category Cards
+  "flex-layout.col#cat-agribusiness": {
+    "props": {
+      "blockClass": "category-card cat-agribusiness",
+      "horizontalAlign": "center",
+      "verticalAlign": "middle",
+      "width": "25%"
+    },
+    "children": ["link#cat-agribusiness"]
+  },
+  "link#cat-agribusiness": {
+    "props": {
+      "href": "/agribusiness",
+      "blockClass": "category-link"
+    },
+    "children": ["flex-layout.col#cat-agribusiness-content"]
+  },
+  "flex-layout.col#cat-agribusiness-content": {
+    "props": {
+      "horizontalAlign": "center",
+      "paddingTop": 6,
+      "paddingBottom": 6
+    },
+    "children": [
+      "rich-text#cat-agribusiness-icon",
+      "rich-text#cat-agribusiness-name"
+    ]
+  },
+  "rich-text#cat-agribusiness-icon": {
+    "props": {
+      "text": "🌾",
+      "textAlignment": "CENTER",
+      "blockClass": "category-icon"
+    }
+  },
+  "rich-text#cat-agribusiness-name": {
+    "props": {
+      "text": "Agribusiness",
+      "textAlignment": "CENTER",
+      "blockClass": "category-name"
+    }
+  },
+
+  "flex-layout.col#cat-apparel": {
+    "props": {
+      "blockClass": "category-card cat-apparel",
+      "horizontalAlign": "center",
+      "verticalAlign": "middle",
+      "width": "25%"
+    },
+    "children": ["link#cat-apparel"]
+  },
+  "link#cat-apparel": {
+    "props": {
+      "href": "/apparel",
+      "blockClass": "category-link"
+    },
+    "children": ["flex-layout.col#cat-apparel-content"]
+  },
+  "flex-layout.col#cat-apparel-content": {
+    "props": {
+      "horizontalAlign": "center",
+      "paddingTop": 6,
+      "paddingBottom": 6
+    },
+    "children": [
+      "rich-text#cat-apparel-icon",
+      "rich-text#cat-apparel-name"
+    ]
+  },
+  "rich-text#cat-apparel-icon": {
+    "props": {
+      "text": "👕",
+      "textAlignment": "CENTER",
+      "blockClass": "category-icon"
+    }
+  },
+  "rich-text#cat-apparel-name": {
+    "props": {
+      "text": "Apparel",
+      "textAlignment": "CENTER",
+      "blockClass": "category-name"
+    }
+  },
+
+  "flex-layout.col#cat-computer": {
+    "props": {
+      "blockClass": "category-card cat-computer",
+      "horizontalAlign": "center",
+      "verticalAlign": "middle",
+      "width": "25%"
+    },
+    "children": ["link#cat-computer"]
+  },
+  "link#cat-computer": {
+    "props": {
+      "href": "/computer---software",
+      "blockClass": "category-link"
+    },
+    "children": ["flex-layout.col#cat-computer-content"]
+  },
+  "flex-layout.col#cat-computer-content": {
+    "props": {
+      "horizontalAlign": "center",
+      "paddingTop": 6,
+      "paddingBottom": 6
+    },
+    "children": [
+      "rich-text#cat-computer-icon",
+      "rich-text#cat-computer-name"
+    ]
+  },
+  "rich-text#cat-computer-icon": {
+    "props": {
+      "text": "💻",
+      "textAlignment": "CENTER",
+      "blockClass": "category-icon"
+    }
+  },
+  "rich-text#cat-computer-name": {
+    "props": {
+      "text": "Computer & Software",
+      "textAlignment": "CENTER",
+      "blockClass": "category-name"
+    }
+  },
+
+  "flex-layout.col#cat-food": {
+    "props": {
+      "blockClass": "category-card cat-food",
+      "horizontalAlign": "center",
+      "verticalAlign": "middle",
+      "width": "25%"
+    },
+    "children": ["link#cat-food"]
+  },
+  "link#cat-food": {
+    "props": {
+      "href": "/food-and-beverage",
+      "blockClass": "category-link"
+    },
+    "children": ["flex-layout.col#cat-food-content"]
+  },
+  "flex-layout.col#cat-food-content": {
+    "props": {
+      "horizontalAlign": "center",
+      "paddingTop": 6,
+      "paddingBottom": 6
+    },
+    "children": [
+      "rich-text#cat-food-icon",
+      "rich-text#cat-food-name"
+    ]
+  },
+  "rich-text#cat-food-icon": {
+    "props": {
+      "text": "🍽️",
+      "textAlignment": "CENTER",
+      "blockClass": "category-icon"
+    }
+  },
+  "rich-text#cat-food-name": {
+    "props": {
+      "text": "Food & Beverage",
+      "textAlignment": "CENTER",
+      "blockClass": "category-name"
+    }
+  },
+
+  "flex-layout.col#cat-home": {
+    "props": {
+      "blockClass": "category-card cat-home",
+      "horizontalAlign": "center",
+      "verticalAlign": "middle",
+      "width": "25%"
+    },
+    "children": ["link#cat-home"]
+  },
+  "link#cat-home": {
+    "props": {
+      "href": "/home-appliance",
+      "blockClass": "category-link"
+    },
+    "children": ["flex-layout.col#cat-home-content"]
+  },
+  "flex-layout.col#cat-home-content": {
+    "props": {
+      "horizontalAlign": "center",
+      "paddingTop": 6,
+      "paddingBottom": 6
+    },
+    "children": [
+      "rich-text#cat-home-icon",
+      "rich-text#cat-home-name"
+    ]
+  },
+  "rich-text#cat-home-icon": {
+    "props": {
+      "text": "🏠",
+      "textAlignment": "CENTER",
+      "blockClass": "category-icon"
+    }
+  },
+  "rich-text#cat-home-name": {
+    "props": {
+      "text": "Home Appliance",
+      "textAlignment": "CENTER",
+      "blockClass": "category-name"
+    }
+  },
+
+  "flex-layout.col#cat-tools": {
+    "props": {
+      "blockClass": "category-card cat-tools",
+      "horizontalAlign": "center",
+      "verticalAlign": "middle",
+      "width": "25%"
+    },
+    "children": ["link#cat-tools"]
+  },
+  "link#cat-tools": {
+    "props": {
+      "href": "/power-tools",
+      "blockClass": "category-link"
+    },
+    "children": ["flex-layout.col#cat-tools-content"]
+  },
+  "flex-layout.col#cat-tools-content": {
+    "props": {
+      "horizontalAlign": "center",
+      "paddingTop": 6,
+      "paddingBottom": 6
+    },
+    "children": [
+      "rich-text#cat-tools-icon",
+      "rich-text#cat-tools-name"
+    ]
+  },
+  "rich-text#cat-tools-icon": {
+    "props": {
+      "text": "🔧",
+      "textAlignment": "CENTER",
+      "blockClass": "category-icon"
+    }
+  },
+  "rich-text#cat-tools-name": {
+    "props": {
+      "text": "Power Tools",
+      "textAlignment": "CENTER",
+      "blockClass": "category-name"
+    }
+  },
+
+  "flex-layout.col#cat-sporting": {
+    "props": {
+      "blockClass": "category-card cat-sporting",
+      "horizontalAlign": "center",
+      "verticalAlign": "middle",
+      "width": "25%"
+    },
+    "children": ["link#cat-sporting"]
+  },
+  "link#cat-sporting": {
+    "props": {
+      "href": "/sporting",
+      "blockClass": "category-link"
+    },
+    "children": ["flex-layout.col#cat-sporting-content"]
+  },
+  "flex-layout.col#cat-sporting-content": {
+    "props": {
+      "horizontalAlign": "center",
+      "paddingTop": 6,
+      "paddingBottom": 6
+    },
+    "children": [
+      "rich-text#cat-sporting-icon",
+      "rich-text#cat-sporting-name"
+    ]
+  },
+  "rich-text#cat-sporting-icon": {
+    "props": {
+      "text": "⚽",
+      "textAlignment": "CENTER",
+      "blockClass": "category-icon"
+    }
+  },
+  "rich-text#cat-sporting-name": {
+    "props": {
+      "text": "Sporting",
+      "textAlignment": "CENTER",
+      "blockClass": "category-name"
+    }
+  },
+
+  "flex-layout.col#cat-tickets": {
+    "props": {
+      "blockClass": "category-card cat-tickets",
+      "horizontalAlign": "center",
+      "verticalAlign": "middle",
+      "width": "25%"
+    },
+    "children": ["link#cat-tickets"]
+  },
+  "link#cat-tickets": {
+    "props": {
+      "href": "/tickets",
+      "blockClass": "category-link"
+    },
+    "children": ["flex-layout.col#cat-tickets-content"]
+  },
+  "flex-layout.col#cat-tickets-content": {
+    "props": {
+      "horizontalAlign": "center",
+      "paddingTop": 6,
+      "paddingBottom": 6
+    },
+    "children": [
+      "rich-text#cat-tickets-icon",
+      "rich-text#cat-tickets-name"
+    ]
+  },
+  "rich-text#cat-tickets-icon": {
+    "props": {
+      "text": "🎫",
+      "textAlignment": "CENTER",
+      "blockClass": "category-icon"
+    }
+  },
+  "rich-text#cat-tickets-name": {
+    "props": {
+      "text": "Tickets",
+      "textAlignment": "CENTER",
+      "blockClass": "category-name"
+    }
+  },
+
+  "flex-layout.col#cat-tours": {
+    "props": {
+      "blockClass": "category-card cat-tours",
+      "horizontalAlign": "center",
+      "verticalAlign": "middle",
+      "width": "25%"
+    },
+    "children": ["link#cat-tours"]
+  },
+  "link#cat-tours": {
+    "props": {
+      "href": "/tours",
+      "blockClass": "category-link"
+    },
+    "children": ["flex-layout.col#cat-tours-content"]
+  },
+  "flex-layout.col#cat-tours-content": {
+    "props": {
+      "horizontalAlign": "center",
+      "paddingTop": 6,
+      "paddingBottom": 6
+    },
+    "children": [
+      "rich-text#cat-tours-icon",
+      "rich-text#cat-tours-name"
+    ]
+  },
+  "rich-text#cat-tours-icon": {
+    "props": {
+      "text": "✈️",
+      "textAlignment": "CENTER",
+      "blockClass": "category-icon"
+    }
+  },
+  "rich-text#cat-tours-name": {
+    "props": {
+      "text": "Tours",
+      "textAlignment": "CENTER",
+      "blockClass": "category-name"
+    }
+  },
+
+  // ==========================================
+  // TRENDING NOW SECTION
+  // ==========================================
+  "flex-layout.row#trending-title": {
+    "props": {
+      "blockClass": "section-title",
+      "horizontalAlign": "center",
+      "paddingTop": 8,
+      "paddingBottom": 5
+    },
+    "children": ["rich-text#trending-title"]
+  },
+  "rich-text#trending-title": {
+    "props": {
+      "text": "### Trending Now",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "section-heading"
+    }
+  },
+  "shelf#trending": {
+    "blocks": ["product-summary.shelf"],
+    "props": {
+      "maxItems": 8,
+      "itemsPerPage": 4,
+      "arrows": true,
+      "showTitle": false,
+      "blockClass": "trending-shelf"
+    }
+  },
+
+  // ==========================================
+  // TECH & APPAREL SECTION (Side by Side)
+  // ==========================================
+  "flex-layout.row#tech-apparel": {
+    "props": {
+      "blockClass": "dual-section",
+      "colGap": 4,
+      "paddingTop": 8,
+      "paddingBottom": 4,
+      "paddingLeft": 6,
+      "paddingRight": 6
+    },
+    "children": [
+      "flex-layout.col#tech-section",
+      "flex-layout.col#apparel-section"
+    ]
+  },
+  "flex-layout.col#tech-section": {
+    "props": {
+      "width": "50%",
+      "blockClass": "category-section tech-section"
+    },
+    "children": [
+      "flex-layout.row#tech-header",
+      "shelf#tech"
+    ]
+  },
+  "flex-layout.row#tech-header": {
+    "props": {
+      "blockClass": "category-section-header tech-header",
+      "paddingTop": 4,
+      "paddingBottom": 4,
+      "paddingLeft": 4,
+      "paddingRight": 4,
+      "horizontalAlign": "left"
+    },
+    "children": ["rich-text#tech-header"]
+  },
+  "rich-text#tech-header": {
+    "props": {
+      "text": "💻 Computer & Software",
+      "blockClass": "category-section-title"
+    }
+  },
+  "shelf#tech": {
+    "blocks": ["product-summary.shelf"],
+    "props": {
+      "category": "9286",
+      "maxItems": 4,
+      "itemsPerPage": 2,
+      "arrows": true,
+      "showTitle": false,
+      "blockClass": "category-shelf"
+    }
+  },
+
+  "flex-layout.col#apparel-section": {
+    "props": {
+      "width": "50%",
+      "blockClass": "category-section apparel-section"
+    },
+    "children": [
+      "flex-layout.row#apparel-header",
+      "shelf#apparel"
+    ]
+  },
+  "flex-layout.row#apparel-header": {
+    "props": {
+      "blockClass": "category-section-header apparel-header",
+      "paddingTop": 4,
+      "paddingBottom": 4,
+      "paddingLeft": 4,
+      "paddingRight": 4,
+      "horizontalAlign": "left"
+    },
+    "children": ["rich-text#apparel-header"]
+  },
+  "rich-text#apparel-header": {
+    "props": {
+      "text": "👕 Apparel",
+      "blockClass": "category-section-title"
+    }
+  },
+  "shelf#apparel": {
+    "blocks": ["product-summary.shelf"],
+    "props": {
+      "category": "9281",
+      "maxItems": 4,
+      "itemsPerPage": 2,
+      "arrows": true,
+      "showTitle": false,
+      "blockClass": "category-shelf"
+    }
+  },
+
+  // ==========================================
+  // EXPERIENCES BANNER (Tickets & Tours)
+  // ==========================================
+  "flex-layout.row#experiences-banner": {
+    "props": {
+      "blockClass": "experiences-banner",
+      "fullWidth": true,
+      "paddingTop": 8,
+      "paddingBottom": 8
+    },
+    "children": ["flex-layout.col#experiences-content"]
+  },
+  "flex-layout.col#experiences-content": {
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": "experiences-content"
+    },
+    "children": [
+      "rich-text#experiences-title",
+      "flex-layout.row#experiences-cards"
+    ]
+  },
+  "rich-text#experiences-title": {
+    "props": {
+      "text": "### 🎫 Experiences & Adventures",
+      "textAlignment": "CENTER",
+      "blockClass": "experiences-heading"
+    }
+  },
+  "flex-layout.row#experiences-cards": {
+    "props": {
+      "colGap": 6,
+      "paddingTop": 5,
+      "horizontalAlign": "center"
+    },
+    "children": [
+      "flex-layout.col#tickets-card",
+      "flex-layout.col#tours-card"
+    ]
+  },
+  "flex-layout.col#tickets-card": {
+    "props": {
+      "blockClass": "experience-card tickets-card",
+      "horizontalAlign": "center",
+      "paddingTop": 6,
+      "paddingBottom": 6,
+      "paddingLeft": 8,
+      "paddingRight": 8
+    },
+    "children": [
+      "rich-text#tickets-card-title",
+      "rich-text#tickets-card-desc",
+      "link#tickets-card-cta"
+    ]
+  },
+  "rich-text#tickets-card-title": {
+    "props": {
+      "text": "#### Tickets",
+      "textAlignment": "CENTER",
+      "blockClass": "experience-card-title"
+    }
+  },
+  "rich-text#tickets-card-desc": {
+    "props": {
+      "text": "Events & Shows",
+      "textAlignment": "CENTER",
+      "blockClass": "experience-card-desc"
+    }
+  },
+  "link#tickets-card-cta": {
+    "props": {
+      "href": "/tickets",
+      "label": "View Events",
+      "blockClass": "experience-cta"
+    }
+  },
+  "flex-layout.col#tours-card": {
+    "props": {
+      "blockClass": "experience-card tours-card",
+      "horizontalAlign": "center",
+      "paddingTop": 6,
+      "paddingBottom": 6,
+      "paddingLeft": 8,
+      "paddingRight": 8
+    },
+    "children": [
+      "rich-text#tours-card-title",
+      "rich-text#tours-card-desc",
+      "link#tours-card-cta"
+    ]
+  },
+  "rich-text#tours-card-title": {
+    "props": {
+      "text": "#### Tours",
+      "textAlignment": "CENTER",
+      "blockClass": "experience-card-title"
+    }
+  },
+  "rich-text#tours-card-desc": {
+    "props": {
+      "text": "Discover New Places",
+      "textAlignment": "CENTER",
+      "blockClass": "experience-card-desc"
+    }
+  },
+  "link#tours-card-cta": {
+    "props": {
+      "href": "/tours",
+      "label": "Explore Tours",
+      "blockClass": "experience-cta"
+    }
+  },
+
+  // ==========================================
+  // TOOLS & HOME SECTION (Side by Side)
+  // ==========================================
+  "flex-layout.row#tools-home": {
+    "props": {
+      "blockClass": "dual-section",
+      "colGap": 4,
+      "paddingTop": 4,
+      "paddingBottom": 4,
+      "paddingLeft": 6,
+      "paddingRight": 6
+    },
+    "children": [
+      "flex-layout.col#tools-section",
+      "flex-layout.col#home-section"
+    ]
+  },
+  "flex-layout.col#tools-section": {
+    "props": {
+      "width": "50%",
+      "blockClass": "category-section tools-section"
+    },
+    "children": [
+      "flex-layout.row#tools-header",
+      "shelf#tools"
+    ]
+  },
+  "flex-layout.row#tools-header": {
+    "props": {
+      "blockClass": "category-section-header tools-header",
+      "paddingTop": 4,
+      "paddingBottom": 4,
+      "paddingLeft": 4,
+      "paddingRight": 4,
+      "horizontalAlign": "left"
+    },
+    "children": ["rich-text#tools-header"]
+  },
+  "rich-text#tools-header": {
+    "props": {
+      "text": "🔧 Power Tools",
+      "blockClass": "category-section-title"
+    }
+  },
+  "shelf#tools": {
+    "blocks": ["product-summary.shelf"],
+    "props": {
+      "category": "9287",
+      "maxItems": 4,
+      "itemsPerPage": 2,
+      "arrows": true,
+      "showTitle": false,
+      "blockClass": "category-shelf"
+    }
+  },
+
+  "flex-layout.col#home-section": {
+    "props": {
+      "width": "50%",
+      "blockClass": "category-section home-section"
+    },
+    "children": [
+      "flex-layout.row#home-header",
+      "shelf#home"
+    ]
+  },
+  "flex-layout.row#home-header": {
+    "props": {
+      "blockClass": "category-section-header home-header",
+      "paddingTop": 4,
+      "paddingBottom": 4,
+      "paddingLeft": 4,
+      "paddingRight": 4,
+      "horizontalAlign": "left"
+    },
+    "children": ["rich-text#home-header"]
+  },
+  "rich-text#home-header": {
+    "props": {
+      "text": "🏠 Home Appliances",
+      "blockClass": "category-section-title"
+    }
+  },
+  "shelf#home": {
+    "blocks": ["product-summary.shelf"],
+    "props": {
+      "category": "9285",
+      "maxItems": 4,
+      "itemsPerPage": 2,
+      "arrows": true,
+      "showTitle": false,
+      "blockClass": "category-shelf"
+    }
+  },
+
+  // ==========================================
+  // AGRI & SPORTING SECTION (Side by Side)
+  // ==========================================
+  "flex-layout.row#agri-sporting": {
+    "props": {
+      "blockClass": "dual-section",
+      "colGap": 4,
+      "paddingTop": 4,
+      "paddingBottom": 4,
+      "paddingLeft": 6,
+      "paddingRight": 6
+    },
+    "children": [
+      "flex-layout.col#agri-section",
+      "flex-layout.col#sporting-section"
+    ]
+  },
+  "flex-layout.col#agri-section": {
+    "props": {
+      "width": "50%",
+      "blockClass": "category-section agri-section"
+    },
+    "children": [
+      "flex-layout.row#agri-header",
+      "shelf#agri"
+    ]
+  },
+  "flex-layout.row#agri-header": {
+    "props": {
+      "blockClass": "category-section-header agri-header",
+      "paddingTop": 4,
+      "paddingBottom": 4,
+      "paddingLeft": 4,
+      "paddingRight": 4,
+      "horizontalAlign": "left"
+    },
+    "children": ["rich-text#agri-header"]
+  },
+  "rich-text#agri-header": {
+    "props": {
+      "text": "🌾 Agribusiness",
+      "blockClass": "category-section-title"
+    }
+  },
+  "shelf#agri": {
+    "blocks": ["product-summary.shelf"],
+    "props": {
+      "category": "9284",
+      "maxItems": 4,
+      "itemsPerPage": 2,
+      "arrows": true,
+      "showTitle": false,
+      "blockClass": "category-shelf"
+    }
+  },
+
+  "flex-layout.col#sporting-section": {
+    "props": {
+      "width": "50%",
+      "blockClass": "category-section sporting-section"
+    },
+    "children": [
+      "flex-layout.row#sporting-header",
+      "shelf#sporting"
+    ]
+  },
+  "flex-layout.row#sporting-header": {
+    "props": {
+      "blockClass": "category-section-header sporting-header",
+      "paddingTop": 4,
+      "paddingBottom": 4,
+      "paddingLeft": 4,
+      "paddingRight": 4,
+      "horizontalAlign": "left"
+    },
+    "children": ["rich-text#sporting-header"]
+  },
+  "rich-text#sporting-header": {
+    "props": {
+      "text": "⚽ Sporting Goods",
+      "blockClass": "category-section-title"
+    }
+  },
+  "shelf#sporting": {
+    "blocks": ["product-summary.shelf"],
+    "props": {
+      "category": "9283",
+      "maxItems": 4,
+      "itemsPerPage": 2,
+      "arrows": true,
+      "showTitle": false,
+      "blockClass": "category-shelf"
+    }
+  },
+
+  // ==========================================
+  // FOOD & BEVERAGE SECTION
+  // ==========================================
+  "flex-layout.row#food-title": {
+    "props": {
+      "blockClass": "section-title food-section-title",
+      "horizontalAlign": "center",
+      "paddingTop": 8,
+      "paddingBottom": 5
+    },
+    "children": ["rich-text#food-title"]
+  },
+  "rich-text#food-title": {
+    "props": {
+      "text": "### 🍽️ Food & Beverage Picks",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "section-heading"
+    }
+  },
+  "shelf#food": {
+    "blocks": ["product-summary.shelf"],
+    "props": {
+      "category": "9282",
+      "maxItems": 6,
+      "itemsPerPage": 6,
+      "arrows": true,
+      "showTitle": false,
+      "blockClass": "food-shelf"
+    }
+  },
+
+  // ==========================================
+  // TRUST BADGES SECTION
+  // ==========================================
+  "flex-layout.row#trust-badges": {
+    "props": {
+      "blockClass": "trust-badges-section",
+      "horizontalAlign": "center",
+      "colGap": 6,
+      "paddingTop": 9,
+      "paddingBottom": 6,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#badge-shipping",
+      "flex-layout.col#badge-secure",
+      "flex-layout.col#badge-support",
+      "flex-layout.col#badge-returns"
+    ]
+  },
+  "flex-layout.col#badge-shipping": {
+    "props": {
+      "blockClass": "trust-badge",
+      "horizontalAlign": "center"
+    },
+    "children": [
+      "rich-text#badge-shipping-icon",
+      "rich-text#badge-shipping-text"
+    ]
+  },
+  "rich-text#badge-shipping-icon": {
+    "props": {
+      "text": "🚚",
+      "textAlignment": "CENTER",
+      "blockClass": "trust-badge-icon"
+    }
+  },
+  "rich-text#badge-shipping-text": {
+    "props": {
+      "text": "**Fast Delivery**",
+      "textAlignment": "CENTER",
+      "blockClass": "trust-badge-text"
+    }
+  },
+  "flex-layout.col#badge-secure": {
+    "props": {
+      "blockClass": "trust-badge",
+      "horizontalAlign": "center"
+    },
+    "children": [
+      "rich-text#badge-secure-icon",
+      "rich-text#badge-secure-text"
+    ]
+  },
+  "rich-text#badge-secure-icon": {
+    "props": {
+      "text": "🔒",
+      "textAlignment": "CENTER",
+      "blockClass": "trust-badge-icon"
+    }
+  },
+  "rich-text#badge-secure-text": {
+    "props": {
+      "text": "**Secure Payment**",
+      "textAlignment": "CENTER",
+      "blockClass": "trust-badge-text"
+    }
+  },
+  "flex-layout.col#badge-support": {
+    "props": {
+      "blockClass": "trust-badge",
+      "horizontalAlign": "center"
+    },
+    "children": [
+      "rich-text#badge-support-icon",
+      "rich-text#badge-support-text"
+    ]
+  },
+  "rich-text#badge-support-icon": {
+    "props": {
+      "text": "💬",
+      "textAlignment": "CENTER",
+      "blockClass": "trust-badge-icon"
+    }
+  },
+  "rich-text#badge-support-text": {
+    "props": {
+      "text": "**24/7 Support**",
+      "textAlignment": "CENTER",
+      "blockClass": "trust-badge-text"
+    }
+  },
+  "flex-layout.col#badge-returns": {
+    "props": {
+      "blockClass": "trust-badge",
+      "horizontalAlign": "center"
+    },
+    "children": [
+      "rich-text#badge-returns-icon",
+      "rich-text#badge-returns-text"
+    ]
+  },
+  "rich-text#badge-returns-icon": {
+    "props": {
+      "text": "↩️",
+      "textAlignment": "CENTER",
+      "blockClass": "trust-badge-icon"
+    }
+  },
+  "rich-text#badge-returns-text": {
+    "props": {
+      "text": "**Easy Returns**",
+      "textAlignment": "CENTER",
+      "blockClass": "trust-badge-text"
+    }
+  },
+
+  // ==========================================
+  // NEWSLETTER SECTION
+  // ==========================================
+  "flex-layout.row#newsletter": {
+    "props": {
+      "blockClass": "newsletter-section",
+      "horizontalAlign": "center",
+      "paddingTop": 8,
+      "paddingBottom": 9,
+      "fullWidth": true
+    },
+    "children": ["flex-layout.col#newsletter-content"]
+  },
+  "flex-layout.col#newsletter-content": {
+    "props": {
+      "horizontalAlign": "center",
+      "blockClass": "newsletter-content"
+    },
+    "children": [
+      "rich-text#newsletter-title",
+      "rich-text#newsletter-subtitle",
+      "newsletter-form"
+    ]
+  },
+  "rich-text#newsletter-title": {
+    "props": {
+      "text": "### Stay Updated",
+      "textAlignment": "CENTER",
+      "blockClass": "newsletter-title"
+    }
+  },
+  "rich-text#newsletter-subtitle": {
+    "props": {
+      "text": "Subscribe for exclusive deals and new arrivals",
+      "textAlignment": "CENTER",
+      "blockClass": "newsletter-subtitle"
+    }
+  },
+  "newsletter-form": {
+    "props": {
+      "blockClass": "newsletter-form"
     }
   }
 }

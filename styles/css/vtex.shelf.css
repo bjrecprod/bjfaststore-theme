@@ -1,0 +1,36 @@
+/* ==========================================
+   SHELF STYLES
+   ========================================== */
+
+/* Trending Shelf */
+.trending-shelf {
+  padding: 0 1.5rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Category Shelf */
+.category-shelf {
+  padding: 1rem;
+}
+
+/* Food Shelf */
+.food-shelf {
+  padding: 0 1.5rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Shelf arrows */
+.vtex-shelf-0-x-arrow {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  width: 40px;
+  height: 40px;
+}
+
+.vtex-shelf-0-x-arrow:hover {
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}

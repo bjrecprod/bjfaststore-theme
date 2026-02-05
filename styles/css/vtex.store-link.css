@@ -1,0 +1,46 @@
+/* ==========================================
+   STORE LINK STYLES
+   ========================================== */
+
+/* Hero CTA Button */
+.hero-cta .link {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  padding: 12px 32px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.hero-cta .link:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Category Link */
+.category-link .link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Experience CTA */
+.experience-cta .link {
+  background: #ffffff;
+  color: #7b1fa2;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.experience-cta .link:hover {
+  background: #f5f5f5;
+}
