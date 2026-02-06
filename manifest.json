@@ -1,7 +1,7 @@
 {
   "vendor": "bjfaststore",
   "name": "store-theme",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "title": "SHOWCASE - BJFaststore Demo Store",
   "description": "Multi-category demo storefront showcasing VTEX capabilities across 9 product verticals: Agribusiness, Apparel, Computer & Software, Food & Beverage, Home Appliance, Power Tools, Sporting, Tickets, and Tours",
   "builders": {
