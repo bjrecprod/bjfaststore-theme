@@ -1,13 +1,33 @@
-# Changelog
+# BJFaststore SHOWCASE Theme - Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to the BJFaststore SHOWCASE Demo Theme will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-// VTEX Store Theme by Growth Hacking Team 
+---
 
 ## [Unreleased]
+
+## [0.1.0] - 2026-02-06 - SHOWCASE Initial Release
+
+### Added
+- SHOWCASE branding and homepage design
+- 9-category grid: Agribusiness, Apparel, Computer & Software, Food and Beverage, Home Appliance, Power Tools, Sporting, Tickets, Tours
+- Custom hero banner for SHOWCASE demo
+- Updated navigation menu with all categories
+- Featured products shelf
+- SHOWCASE color theme
+- Custom footer with demo store info
+
+### Changed
+- Forked from vtex-apps/store-theme v5.2.0
+- Updated vendor to bjfaststore
+- Updated manifest branding for SHOWCASE
+
+---
+
+## Previous Versions (from vtex-apps/store-theme)
 
 ## [5.2.0] - 2024-09-05
 

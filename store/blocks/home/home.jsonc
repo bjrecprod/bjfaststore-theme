@@ -1,67 +1,275 @@
 {
   "store.home": {
     "blocks": [
-      "list-context.image-list#demo",
-      /* You can make references to blocks defined in other files.
-       * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
-      "flex-layout.row#deals",
+      "flex-layout.row#showcase-hero",
+      "flex-layout.row#showcase-welcome",
       "__fold__",
-      "rich-text#shelf-title",
-      "flex-layout.row#shelf",
-      "info-card#home",
-      "rich-text#question",
-      "rich-text#link",
+      "rich-text#categories-title",
+      "flex-layout.row#category-grid",
+      "rich-text#featured-title",
+      "flex-layout.row#featured-shelf",
+      "rich-text#trending-title",
+      "flex-layout.row#trending-shelf",
+      "info-card#showcase-cta",
       "newsletter"
     ]
   },
 
-  "list-context.image-list#demo": {
-    "children": ["slider-layout#demo-images"],
+  /* ========== SHOWCASE HERO SECTION ========== */
+  "flex-layout.row#showcase-hero": {
     "props": {
-      "height": 570,
-      "preload": true,
-      "images": [
-        {
-          "image": "https://storecomponents.vteximg.com.br/arquivos/Class&Style-desktop.png",
-          "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/Class&Style-mobile.png"
-        },
-        {
-          "image": "https://storecomponents.vteximg.com.br/arquivos/banner-decoration.png",
-          "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/banner-decoration-mobile.png"
-        }
-      ]
-    }
+      "blockClass": "showcase-hero",
+      "fullWidth": true
+    },
+    "children": ["rich-text#hero-content"]
   },
-  "slider-layout#demo-images": {
+
+  "rich-text#hero-content": {
     "props": {
-      "itemsPerPage": {
-        "desktop": 1,
-        "tablet": 1,
-        "phone": 1
-      },
-      "infinite": true,
-      "showNavigationArrows": "desktopOnly",
-      "blockClass": "carousel"
+      "text": "# SHOWCASE\n### Your Multi-Category Demo Experience\n\nExplore products across 9 different verticals - from Agriculture to Tourism",
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER",
+      "blockClass": "hero-content"
     }
   },
 
-  "rich-text#shelf-title": {
+  "flex-layout.row#showcase-welcome": {
     "props": {
-      "text": "## Summer",
-      "blockClass": "shelfTitle"
+      "blockClass": "welcome-row",
+      "marginTop": 6,
+      "marginBottom": 6,
+      "paddingLeft": 5,
+      "paddingRight": 5
+    },
+    "children": ["rich-text#welcome-text"]
+  },
+
+  "rich-text#welcome-text": {
+    "props": {
+      "text": "Welcome to the **BJFaststore SHOWCASE** - a comprehensive demo store designed to demonstrate VTEX platform capabilities across multiple product categories. Browse our curated selection of products spanning technology, fashion, home goods, and more.",
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER",
+      "blockClass": "welcome-text"
     }
   },
-  "flex-layout.row#shelf": {
-    "children": ["list-context.product-list#demo1"]
+
+  /* ========== CATEGORY GRID SECTION ========== */
+  "rich-text#categories-title": {
+    "props": {
+      "text": "## Shop by Category",
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER",
+      "blockClass": "section-title"
+    }
   },
-  "list-context.product-list#demo1": {
+
+  "flex-layout.row#category-grid": {
+    "props": {
+      "blockClass": "category-grid",
+      "marginBottom": 8,
+      "paddingLeft": 5,
+      "paddingRight": 5
+    },
+    "children": ["flex-layout.col#categories-wrapper"]
+  },
+
+  "flex-layout.col#categories-wrapper": {
+    "props": {
+      "blockClass": "categories-wrapper"
+    },
+    "children": [
+      "flex-layout.row#category-row-1",
+      "flex-layout.row#category-row-2",
+      "flex-layout.row#category-row-3"
+    ]
+  },
+
+  "flex-layout.row#category-row-1": {
+    "props": {
+      "blockClass": "category-row",
+      "colGap": 4,
+      "marginBottom": 4
+    },
+    "children": [
+      "info-card#cat-agribusiness",
+      "info-card#cat-apparel",
+      "info-card#cat-computer"
+    ]
+  },
+
+  "flex-layout.row#category-row-2": {
+    "props": {
+      "blockClass": "category-row",
+      "colGap": 4,
+      "marginBottom": 4
+    },
+    "children": [
+      "info-card#cat-food",
+      "info-card#cat-home-appliance",
+      "info-card#cat-power-tools"
+    ]
+  },
+
+  "flex-layout.row#category-row-3": {
+    "props": {
+      "blockClass": "category-row",
+      "colGap": 4,
+      "marginBottom": 4
+    },
+    "children": [
+      "info-card#cat-sporting",
+      "info-card#cat-tickets",
+      "info-card#cat-tours"
+    ]
+  },
+
+  /* Category Cards */
+  "info-card#cat-agribusiness": {
+    "props": {
+      "id": "cat-agribusiness",
+      "isFullModeStyle": false,
+      "textPosition": "center",
+      "headline": "Agribusiness",
+      "subhead": "Farm & Agriculture",
+      "callToActionText": "Shop Now",
+      "callToActionUrl": "/agribusiness",
+      "blockClass": "category-card"
+    }
+  },
+
+  "info-card#cat-apparel": {
+    "props": {
+      "id": "cat-apparel",
+      "isFullModeStyle": false,
+      "textPosition": "center",
+      "headline": "Apparel",
+      "subhead": "Fashion & Clothing",
+      "callToActionText": "Shop Now",
+      "callToActionUrl": "/apparel",
+      "blockClass": "category-card"
+    }
+  },
+
+  "info-card#cat-computer": {
+    "props": {
+      "id": "cat-computer",
+      "isFullModeStyle": false,
+      "textPosition": "center",
+      "headline": "Computer & Software",
+      "subhead": "Tech & Electronics",
+      "callToActionText": "Shop Now",
+      "callToActionUrl": "/computer---software",
+      "blockClass": "category-card"
+    }
+  },
+
+  "info-card#cat-food": {
+    "props": {
+      "id": "cat-food",
+      "isFullModeStyle": false,
+      "textPosition": "center",
+      "headline": "Food & Beverage",
+      "subhead": "Gourmet & Groceries",
+      "callToActionText": "Shop Now",
+      "callToActionUrl": "/food-and-beverage",
+      "blockClass": "category-card"
+    }
+  },
+
+  "info-card#cat-home-appliance": {
+    "props": {
+      "id": "cat-home-appliance",
+      "isFullModeStyle": false,
+      "textPosition": "center",
+      "headline": "Home Appliance",
+      "subhead": "Household & Kitchen",
+      "callToActionText": "Shop Now",
+      "callToActionUrl": "/home-appliance",
+      "blockClass": "category-card"
+    }
+  },
+
+  "info-card#cat-power-tools": {
+    "props": {
+      "id": "cat-power-tools",
+      "isFullModeStyle": false,
+      "textPosition": "center",
+      "headline": "Power Tools",
+      "subhead": "Tools & Equipment",
+      "callToActionText": "Shop Now",
+      "callToActionUrl": "/power-tools",
+      "blockClass": "category-card"
+    }
+  },
+
+  "info-card#cat-sporting": {
+    "props": {
+      "id": "cat-sporting",
+      "isFullModeStyle": false,
+      "textPosition": "center",
+      "headline": "Sporting",
+      "subhead": "Sports & Outdoors",
+      "callToActionText": "Shop Now",
+      "callToActionUrl": "/sporting",
+      "blockClass": "category-card"
+    }
+  },
+
+  "info-card#cat-tickets": {
+    "props": {
+      "id": "cat-tickets",
+      "isFullModeStyle": false,
+      "textPosition": "center",
+      "headline": "Tickets",
+      "subhead": "Events & Entertainment",
+      "callToActionText": "Shop Now",
+      "callToActionUrl": "/tickets",
+      "blockClass": "category-card"
+    }
+  },
+
+  "info-card#cat-tours": {
+    "props": {
+      "id": "cat-tours",
+      "isFullModeStyle": false,
+      "textPosition": "center",
+      "headline": "Tours",
+      "subhead": "Travel & Experiences",
+      "callToActionText": "Shop Now",
+      "callToActionUrl": "/tours",
+      "blockClass": "category-card"
+    }
+  },
+
+  /* ========== FEATURED PRODUCTS SECTION ========== */
+  "rich-text#featured-title": {
+    "props": {
+      "text": "## Featured Products",
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER",
+      "blockClass": "section-title"
+    }
+  },
+
+  "flex-layout.row#featured-shelf": {
+    "props": {
+      "blockClass": "product-shelf-row",
+      "paddingLeft": 5,
+      "paddingRight": 5,
+      "marginBottom": 8
+    },
+    "children": ["list-context.product-list#featured"]
+  },
+
+  "list-context.product-list#featured": {
     "blocks": ["product-summary.shelf"],
-    "children": ["slider-layout#demo-products"],
+    "children": ["slider-layout#featured-products"],
     "props": {
       "orderBy": "OrderByTopSaleDESC"
     }
   },
-  "slider-layout#demo-products": {
+
+  "slider-layout#featured-products": {
     "props": {
       "itemsPerPage": {
         "desktop": 4,
@@ -74,31 +282,59 @@
     }
   },
 
-  "info-card#home": {
+  /* ========== TRENDING PRODUCTS SECTION ========== */
+  "rich-text#trending-title": {
     "props": {
-      "id": "info-card-home",
-      "isFullModeStyle": false,
-      "textPosition": "left",
-      "imageUrl": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
-      "headline": "Clearance Sale",
-      "callToActionText": "DISCOVER",
-      "callToActionUrl": "/sale/d",
-      "blockClass": "info-card-home",
+      "text": "## Trending Now",
+      "textPosition": "CENTER",
+      "textAlignment": "CENTER",
+      "blockClass": "section-title"
+    }
+  },
+
+  "flex-layout.row#trending-shelf": {
+    "props": {
+      "blockClass": "product-shelf-row",
+      "paddingLeft": 5,
+      "paddingRight": 5,
+      "marginBottom": 8
+    },
+    "children": ["list-context.product-list#trending"]
+  },
+
+  "list-context.product-list#trending": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#trending-products"],
+    "props": {
+      "orderBy": "OrderByReleaseDateDESC"
+    }
+  },
+
+  "slider-layout#trending-products": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+
+  /* ========== CTA SECTION ========== */
+  "info-card#showcase-cta": {
+    "props": {
+      "id": "showcase-cta",
+      "isFullModeStyle": true,
+      "textPosition": "center",
+      "headline": "Experience the Full VTEX Platform",
+      "subhead": "This demo showcases the power and flexibility of VTEX IO Store Framework",
+      "callToActionText": "Learn More",
+      "callToActionUrl": "/about-us",
+      "blockClass": "showcase-cta",
       "textAlignment": "center"
-    }
-  },
-
-  "rich-text#question": {
-    "props": {
-      "text": "**This is an example store built using the VTEX platform.\nWant to know more?**",
-      "blockClass": "question"
-    }
-  },
-
-  "rich-text#link": {
-    "props": {
-      "text": "\n**Reach us at**\nwww.vtex.com.br",
-      "blockClass": "link"
     }
   }
 }

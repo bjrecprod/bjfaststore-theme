@@ -4,112 +4,126 @@
       "experimentalOptimizeRendering": true
     },
     "children": [
-      "menu-item#category-apparel",
-      "menu-item#category-home",
+      "menu-item#cat-agribusiness",
+      "menu-item#cat-apparel",
+      "menu-item#cat-computer",
+      "menu-item#cat-food",
+      "menu-item#cat-home",
+      "menu-item#cat-tools",
+      "menu-item#cat-sporting",
       "menu-item#more"
     ]
   },
-  "menu-item#category-apparel": {
+
+  "menu-item#cat-agribusiness": {
     "props": {
-      "id": "menu-item-category-apparel",
+      "id": "menu-item-agribusiness",
       "type": "custom",
-      "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/apparel---accessories/",
+        "href": "/agribusiness",
         "noFollow": false,
-        "tagTitle": "Apparel & Accessories",
-        "text": "Apparel & Accessories"
-      }
-    },
-    "blocks": [
-      "vtex.menu@2.x:submenu#category-apparel"
-    ]
-  },
-  "vtex.menu@2.x:submenu#category-apparel": {
-    "props": {
-      "width": "auto"
-    },
-    "children": [
-      "vtex.menu@2.x:menu#category-apparel"
-    ]
-  },
-  "vtex.menu@2.x:menu#category-apparel": {
-    "props": {
-      "orientation": "vertical"
-    },
-    "children": [
-      "menu-item#category-apparel-clothing",
-      "menu-item#category-apparel-accessories",
-      "menu-item#category-apparel-eyeglasses"
-    ]
-  },
-  "menu-item#category-apparel-clothing": {
-    "props": {
-      "id": "menu-item-category-apparel-clothing",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "type": "internal",
-        "href": "/apparel---accessories/clothing/",
-        "noFollow": false,
-        "tagTitle": "Clothing",
-        "text": "Clothing"
+        "tagTitle": "Agribusiness",
+        "text": "Agribusiness"
       }
     }
   },
-  "menu-item#category-apparel-accessories": {
+
+  "menu-item#cat-apparel": {
     "props": {
-      "id": "menu-item-category-apparel-accessories",
+      "id": "menu-item-apparel",
       "type": "custom",
-      "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/apparel---accessories/accessories/",
+        "href": "/apparel",
         "noFollow": false,
-        "tagTitle": "Accessories",
-        "text": "Accessories"
+        "tagTitle": "Apparel",
+        "text": "Apparel"
       }
     }
   },
-  "menu-item#category-apparel-eyeglasses": {
+
+  "menu-item#cat-computer": {
     "props": {
-      "id": "menu-item-category-apparel-eyeglasses",
+      "id": "menu-item-computer",
       "type": "custom",
-      "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/apparel---accessories/eyeglasses/",
+        "href": "/computer---software",
         "noFollow": false,
-        "tagTitle": "Eyeglasses",
-        "text": "Eyeglasses"
+        "tagTitle": "Computer & Software",
+        "text": "Tech"
       }
     }
   },
-  "menu-item#category-home": {
+
+  "menu-item#cat-food": {
     "props": {
-      "id": "menu-item-category-home",
+      "id": "menu-item-food",
       "type": "custom",
-      "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/home---decor/",
+        "href": "/food-and-beverage",
         "noFollow": false,
-        "tagTitle": "Home & Decor",
-        "text": "Home & Decor"
+        "tagTitle": "Food and Beverage",
+        "text": "Food"
       }
     }
   },
+
+  "menu-item#cat-home": {
+    "props": {
+      "id": "menu-item-home-appliance",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/home-appliance",
+        "noFollow": false,
+        "tagTitle": "Home Appliance",
+        "text": "Home"
+      }
+    }
+  },
+
+  "menu-item#cat-tools": {
+    "props": {
+      "id": "menu-item-power-tools",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/power-tools",
+        "noFollow": false,
+        "tagTitle": "Power Tools",
+        "text": "Tools"
+      }
+    }
+  },
+
+  "menu-item#cat-sporting": {
+    "props": {
+      "id": "menu-item-sporting",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/sporting",
+        "noFollow": false,
+        "tagTitle": "Sporting",
+        "text": "Sports"
+      }
+    }
+  },
+
   "menu-item#more": {
     "props": {
-      "id": "menu-item-custom-sale",
+      "id": "menu-item-more",
       "type": "custom",
-      "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
@@ -119,85 +133,68 @@
         "text": "More"
       }
     },
-    "blocks": [
-      "vtex.menu@2.x:submenu#more"
-    ]
+    "blocks": ["vtex.menu@2.x:submenu#more"]
   },
+
   "vtex.menu@2.x:submenu#more": {
     "props": {
-      "width": "100%"
+      "width": "auto"
     },
-    "children": [
-      "flex-layout.row#menu-more"
-    ]
+    "children": ["vtex.menu@2.x:menu#more"]
   },
-  "flex-layout.row#menu-more": {
-    "children": [
-      "flex-layout.col#menu-more-1",
-      "flex-layout.col#menu-more-2"
-    ]
-  },
-  "flex-layout.col#menu-more-1": {
-    "children": [
-      "vtex.menu@2.x:menu#more"
-    ]
-  },
-  "flex-layout.col#menu-more-2": {
-    "children": [
-      "info-card#home"
-    ]
-  },
+
   "vtex.menu@2.x:menu#more": {
     "props": {
       "orientation": "vertical"
     },
     "children": [
-      "menu-item#about-us",
-      "menu-item#faq"
+      "menu-item#cat-tickets",
+      "menu-item#cat-tours",
+      "menu-item#about-us"
     ]
   },
+
+  "menu-item#cat-tickets": {
+    "props": {
+      "id": "menu-item-tickets",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/tickets",
+        "noFollow": false,
+        "tagTitle": "Tickets",
+        "text": "Tickets"
+      }
+    }
+  },
+
+  "menu-item#cat-tours": {
+    "props": {
+      "id": "menu-item-tours",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/tours",
+        "noFollow": false,
+        "tagTitle": "Tours",
+        "text": "Tours"
+      }
+    }
+  },
+
   "menu-item#about-us": {
     "props": {
       "id": "menu-item-about-us",
       "type": "custom",
-      "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
         "href": "/about-us",
         "noFollow": true,
-        "tagTitle": "About us",
-        "text": "About us"
-      }
-    }
-  },
-  "menu-item#faq": {
-    "props": {
-      "id": "menu-item-faq",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "type": "internal",
-        "href": "/faq",
-        "noFollow": true,
-        "tagTitle": "FAQ",
-        "text": "FAQ"
-      }
-    }
-  },
-  "menu-item#contact-us": {
-    "props": {
-      "id": "menu-item-contact-us",
-      "type": "custom",
-      "iconId": null,
-      "highlight": false,
-      "itemProps": {
-        "type": "internal",
-        "href": "/contact-us",
-        "noFollow": true,
-        "tagTitle": "Contact Us",
-        "text": "Contact Us"
+        "tagTitle": "About Us",
+        "text": "About Us"
       }
     }
   }
